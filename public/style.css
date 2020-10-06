@@ -1,0 +1,334 @@
+/* Variables params */
+:root{
+    --main-bg-color : beige;
+    --second-bg-color : navajowhite;
+    --main-font : "Bauhaus 93", serif;
+    --second-font : "Bookman Old Style", serif;
+}
+
+
+
+
+
+    /* HTML Basics */
+
+button{
+    font-family: var(--main-font);
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    height: 40px;
+    width: 100px;
+    text-decoration: none;
+    }
+body{
+    background-color: var(--main-bg-color);
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+
+
+
+
+
+
+
+
+/* Symfony & Twig blocks */
+
+.header{
+    font-family: var(--main-font);
+    font-size: 60px;
+    text-align: center;
+    background-color: var(--main-bg-color);
+}
+.main{
+    font-family: var(--second-font);
+    background-color: var(--second-bg-color);
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: larger;
+    border: solid 3px ;
+    border-radius: 30px;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer{
+    background-color: var(--main-bg-color);
+    text-align: right;
+    padding-right: 20px;
+    font-family: var(--main-font);
+    font-size: larger;
+    margin-top: 100px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--second-font);
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+}
+
+.flash-success {
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    color: seagreen;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.alert{
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.usernameright{
+     animation: slideinright 4s;
+    margin-left: 10px;
+}
+.usernameleft{
+    animation: slideinleft 4s;
+    margin-right: 10px;
+}
+.username{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--main-font);
+    justify-content: center;
+    font-size: 40px;
+}
+
+
+/* Home*/
+.homecenter{
+
+}
+.hometext{
+    padding: 40px 80px 20px 80px;
+    text-align: justify;
+    margin-bottom: 80px;
+}
+.lastwish{
+    background-color: var(--main-bg-color);
+    border-radius: 30px;
+    border: solid 1px #222222;
+    margin-top: 80px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 20px;
+}
+
+
+
+
+/* Other classes */
+
+.form{
+    font-weight: bold;
+}
+.textarea{
+    margin-top: 20px;
+    background-color: var(--main-bg-color);
+    width: 80%;
+    height: 180px;
+    letter-spacing: 1px;
+    font-family: var(--second-font);
+    border-radius: 30px;
+    padding: 50px;
+}
+.talestext{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+#idea_category{
+    background-color: var(--main-bg-color);
+
+    border-radius: 30px;
+}
+.formlabel{
+    padding-top: 15px;
+}
+.forminput{
+    padding-top: 5px;
+}
+input{
+    margin-top: 20px;
+    background-color: var(--main-bg-color);
+    letter-spacing: 1px;
+    font-family: var(--second-font);
+    border-radius: 30px;
+    text-align: center
+}
+.img{
+    max-width: 60px;
+}
+.menubar{
+    background-color: var(--second-bg-color);
+    border: solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+
+
+
+
+
+/* About us */
+.joke{
+    color: var(--second-bg-color);
+    font-weight: bolder;
+}
+.joke:hover{
+    color: black;
+    transition: 5s;
+}
+.pirate{
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+/* Idea Details */
+.author{
+    font-family: var(--second-font);
+    font-weight: bold;
+    padding-top: 15px;
+}
+.idea{
+    font-family: var(--second-font);
+    font-weight: bold;
+    font-size: X-large;
+    padding-top: 15px;
+}
+.description{
+    padding-top: 15px;
+    font-style: oblique;
+}
+.ideadetails{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#rate2{
+    height: 110%;
+}
+[type=Radio]{
+    margin: 20px;
+}
+#radiorating{
+    margin: 20px;
+}
+#submitrate{
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+}
+
+
+
+
+
+
+
+/* Login */
+
+.logininput{
+    margin-top: 20px;
+    background-color: var(--main-bg-color);
+    letter-spacing: 1px;
+    font-family: var(--second-font);
+    border-radius: 30px;
+    text-align: center;
+    width: 200px;
+}
+.submitlogin{
+    margin-top: 15px;
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+}
+.logincredentials{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+/* Animations */
+
+.boat{
+    animation: sailing 3s infinite;
+    animation-direction: alternate;
+}
+.book{
+    height: 100px;
+}
+.book:hover{
+    animation: zoombook 1s ;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+
+
+/* Keyframe */
+
+@keyframes sailing {
+    from{
+        transform: rotate(45deg);
+
+    }
+    to{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes slideinleft {
+    from{
+        transform: translate(-1400px);
+
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+@keyframes slideinright {
+    from{
+        transform: translate(1400px);
+
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+
+@keyframes zoombook {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+
+}
+

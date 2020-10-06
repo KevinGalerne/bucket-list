@@ -1,0 +1,36 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block main %}
+
+    {% if average %}
+    This tale receive a average rate of  {{ average }} it's parrots by the council of pirates.
+    {%  endif %}
+    <div class="idea">{{ idea.title }}</div>
+    <div class="description">{{ idea.description }}</div>
+    <div class="ideadetails"> Posted by {{ idea.author }} into {{ idea.category.name }} on {{ idea.dateCreated|date ('Y-m-d') }}</div>
+
+
+
+    <div class="radiorate">
+
+        <form>
+            <div id="radiorating">
+
+             <img src={{ asset('img/parrot.png') }}>
+                <input type="radio" name="rate" value="1">
+              <img src={{ asset('img/parrot2.png') }}></label>
+                <input type="radio" name="rate" value="2">
+             <img src={{ asset('img/parrot3.png') }}></label>
+                <input type="radio" name="rate" value="3">
+            </div>
+            <input type="submit" id="submitrate" name="submit" value="Rate Dis shit">
+
+        </form>
+    </div>
+
+
+{% endblock %}
+
+

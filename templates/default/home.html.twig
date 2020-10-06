@@ -1,0 +1,43 @@
+{%  extends 'layout.html.twig' %}
+
+{%  block title %}
+    Welcome on Bucket-List !
+{%  endblock %}
+
+{% block name %}
+    {% if app.user %}
+        <div class="usernameleft"> Welcome home </div> <div class="usernameright">{{ app.user.username }}</div>
+    {% endif %}
+{% endblock %}
+
+
+
+
+{%  block main %}
+
+    <div class="homecenter">
+        <div class="hometext">
+            <p>Ahoy ! What do you wish before you go the the Davy Jone's locker?
+                Tell your captain the tales you want to live !</p>
+        </div>
+    <div class="book">
+        {% if app.user %}
+            <a href={{ path('tales') }}><img class="book" src="{{ asset('img/book.svg') }}"></a>
+        {%  endif %}
+        {% if app.user is empty %}
+
+            <a href={{ path('app_register') }}><img class="book" src="{{ asset('img/treasure.svg') }}"></a>
+        {% endif %}
+
+    </div>
+
+        <div class="lastwish">
+            <div class="idea">The last wish is :</div>
+            <div class="description"> {{ lastOne.title }}</div>
+            by
+            <div class="author">{{ lastOne.author }}</div>
+        </div>
+
+    </div>
+
+{% endblock %}

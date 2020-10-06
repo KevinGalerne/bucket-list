@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+
+
+
+
+{% block main %}
+<div class="talestext">
+    Imagine you're on a journey, a sailor sailing on his own life ! <br><br>
+
+    What are the things you would like to do before journey's end?<br>
+    It might be crazy, simple, or absolutely stupid, just write it !<br><br><br>
+    
+    Some just want to learn guitar <img class="img" src="{{ asset('img/ukulele.svg') }}">
+    Others want to be a unicorn cupcake <img class="img" src="{{ asset('img/cupcake.svg') }}">!
+</div>
+
+
+    {{ form_start(ideaForm) }}
+
+    <div class="form">
+
+        <div class="formlabel">
+            Scallywag name
+        </div>
+        <div class="forminput">
+
+        {{ form_errors(ideaForm.author) }}
+            {{ form_widget((ideaForm.author)) }}
+        </div>
+
+        <div class="formlabel">
+        Sailor's wish?
+        </div>
+        <div class="forminput">
+        {{ form_widget (ideaForm.title)}}
+        </div>
+        <div class="formlabel">
+            Describe it !
+        </div>
+        <div class="forminput">
+            {{  form_widget(ideaForm.description)}}
+        </div>
+
+        <div class="forminput">
+            Category
+            {{  form_widget(ideaForm.category)}}
+        </div>
+
+        <div class="forminput">
+            {{ form_widget(ideaForm.Arrh) }}
+        </div>
+
+        {{ form_end(ideaForm) }}
+    </div>
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('style.css')}}"  >
+    <link rel="icon" type="image/x-icon" href="{{ asset("img/favicon.png") }}" />
+
+    <title>{% block title %} Bucket-List {% endblock %}</title>
+
+</head>
+<body>
+
+<div class="container">
+
+
+<!-- Header, refer to an image with the asset item, is also animated with CSS (look at sailing keyframe) -->
+    <header class="header">
+        {%  block header %}
+            <a href="{{ path('home') }}"><img class="boat" src="{{ asset('img/ship.png') }}" ><br></a>
+            Bucket-List ! !
+        {% endblock %}
+    </header>
+
+
+
+
+
+
+
+    <!-- Display the username if he's logged in -->
+    <div class="username">
+        {% block name %}
+
+        {% endblock %}
+    </div>
+
+
+
+
+
+
+
+<!-- Display the menubar depending if the user is logged in or anonymous -->
+    <menu class="menu">
+        {% block menu %}
+            {% if app.user %}
+                <a class="menubar" href={{ path('idea_list') }}>Chest o' wishes!</a>
+                <a class="menubar" href={{ path('tales') }}>New tale!</a>
+                <a class="menubar" href={{  path('aboutus') }}>'bout us</a>
+                <a class="menubar" href={{  path('app_logout') }}>Leave the boat</a>
+            {% endif %}
+            {% if app.user is empty%}
+                <a class="menubar" href={{ path('app_login') }}>Log'</a>
+                <a class="menubar" href={{ path('app_register') }}>'Join the crew</a>
+                <a class="menubar" href={{  path('aboutus') }}>'bout us</a>
+            {% endif %}
+        {% endblock %}
+    </menu>
+
+
+
+
+    <!-- Get the flash message sent into the render and display them -->
+    {% for label, messages in app.flashes %}
+        {% for message in messages  %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+
+
+
+    <!-- The main block is the part that is customize in each html.twig file -->
+    <main class="main">
+        {% block main %}
+        {%  endblock %}
+    </main>
+
+
+</div>
+</body>
+
+
+
+
+<!-- Footer, just the footer -->
+<footer class="footer">
+    {%  block footer %}
+        &copy; {{ "now"|date("Y") }} Bucket-List !<br>
+        Made by <a href="http://www.kevingalerne.fr">K</a>
+    {%  endblock %}
+</footer>
+</html>
